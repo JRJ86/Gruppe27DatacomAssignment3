@@ -37,7 +37,8 @@
 
       <h2>CSV to HTML Table</h2>
 
-      
+      <div id ='table-contain2'></div>
+
       <div id='table-container'></div>
 
     </div><!-- /.container -->
@@ -69,12 +70,21 @@
       }
 
       CsvToHtmlTable.init({
-        csv_path: 'C:/Users/swold/Documents/My file/someName.csv',
-        element: 'table-container', 
-        allow_download: false,
-        csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": false},
-        custom_formatting: [[1, format_link]]
+          csv_path: 'data/sensorData.csv',
+          element: 'table-container',
+          allow_download: false,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          custom_formatting: [[4, format_link]]
+      });
+
+      CsvToHtmlTable.init({
+          csv_path: 'data/sensor4Data.csv',
+          element: 'table-container2',
+          allow_download: false,
+          csv_options: {separator: ',', delimiter: '"'},
+          datatables_options: {"paging": false},
+          custom_formatting: [[4, format_link]]
       });
     </script>
   </body>
